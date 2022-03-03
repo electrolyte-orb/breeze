@@ -21,7 +21,7 @@ export default function Button({
 	switch (variant) {
 		case 'primary':
 			classApplied =
-				'focus:outline focus:outline-offset-2 outline-blue-500 bg-blue-500 text-white font-medium ';
+				'focus:outline-2 focus:outline-offset-2 outline-blue-500 bg-blue-500 text-white font-medium ';
 			break;
 		case 'secondary':
 			classApplied = '';
@@ -29,7 +29,7 @@ export default function Button({
 
 		default:
 			classApplied =
-				'focus:outline focus:outline-offset-2 outline-emerald-500 bg-emerald-500 text-white font-medium ';
+				'focus:outline-2 focus:outline-offset-2 outline-emerald-500 bg-emerald-500 text-white font-medium ';
 			break;
 	}
 

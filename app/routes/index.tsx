@@ -19,7 +19,7 @@ export default function Index() {
 					Your open source cooperatives' meeting place.
 				</h2>
 				<p className="text-sm font-medium my-4 text-emerald-500">
-					Simply put. Breeze Me a{' '}
+					Simply put. Breeze Me is a{' '}
 					<a
 						href="https://firebase.google.com"
 						target="_blank"
@@ -28,7 +28,8 @@ export default function Index() {
 						Firebase
 					</a>{' '}
 					powered fully open sourced interaction platform for gitters. Our
-					project is still a startup we are in need of contributors to our{' '}
+					project is still a startup and so we are in need of contributors to
+					our{' '}
 					<a
 						href="https://github.com/electrolyte-orb/breeze"
 						target="_blank"
@@ -36,7 +37,8 @@ export default function Index() {
 					>
 						Github Repo
 					</a>
-					. Or atleast give us{' '}
+					. Even a little typofix will be a great <i>contrib</i> nontheless give
+					us{' '}
 					<a
 						href="https://github.com/electrolyte-orb/breeze/issues/new"
 						target="_blank"
