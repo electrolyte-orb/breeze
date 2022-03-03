@@ -1,13 +1,16 @@
-import { ComponentProps, ReactNode } from 'react';
+import { ComponentProps } from 'react';
 
 interface ButtonProps {
-	children: ReactNode;
 	variant?: 'primary' | 'secondary';
+	size?: 'lg' | 'sm' | 'md';
+	shadow?: 'lg' | 'md' | 'sm';
 }
 
 export default function Button({
 	children,
 	variant,
+	size,
+	shadow,
 	...props
 }: ButtonProps & ComponentProps<'button'>) {
 	const props_copy = { ...props };
@@ -18,7 +21,7 @@ export default function Button({
 	switch (variant) {
 		case 'primary':
 			classApplied =
-				'Button--Primary border border-blue-600 px-4 py-2 bg-blue-500 border-radius-lg text-white';
+				'focus:outline focus:outline-offset-2 outline-blue-500 bg-blue-500 text-white font-medium ';
 			break;
 		case 'secondary':
 			classApplied = '';
@@ -26,19 +29,34 @@ export default function Button({
 
 		default:
 			classApplied =
-				'Button--Primary border border-blue-600 px-4 py-2 bg-blue-500 rounded-lg text-white text-sm font-medium';
+				'focus:outline focus:outline-offset-2 outline-emerald-500 bg-emerald-500 text-white font-medium ';
+			break;
+	}
+
+	switch (size) {
+		default:
+			classApplied += 'py-2 px-4 rounded-lg text-sm ';
+			break;
+	}
+	switch (shadow) {
+		case 'lg':
+			classApplied += 'shadow-lg';
+			break;
+		case 'md':
+			classApplied += 'shadow-md';
+			break;
+		case 'sm':
+			classApplied += 'shadow-sm';
+			break;
+		default:
+			classApplied += '';
 			break;
 	}
 
 	return (
 		<button
 			{...props_copy}
-			className={
-				'Button ' +
-				classApplied +
-				' ' +
-				(props.className ? props.className : '')
-			}
+			className={classApplied + ' ' + (props.className ? props.className : '')}
 		>
 			{children}
 		</button>

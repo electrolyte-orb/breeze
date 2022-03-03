@@ -4,6 +4,6 @@
 
 @layer components {
 	body {
-		@apply min-h-screen flow-root;
+		@apply flow-root leading-tight;
 	}
 }
