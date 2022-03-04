@@ -1,5 +1,6 @@
 import Button from '~/components/Button/Button';
 import logo from '~/images/wind-svgrepo-com.svg';
+import { Link } from 'remix';
 
 export default function Index() {
 	return (
@@ -37,8 +38,7 @@ export default function Index() {
 					>
 						Github Repo
 					</a>
-					. Even a little typofix will be a great <i>contrib</i> nontheless give
-					us{' '}
+					. Even a little typofix would be a great help, nontheless give us your{' '}
 					<a
 						href="https://github.com/electrolyte-orb/breeze/issues/new"
 						target="_blank"
@@ -53,7 +53,9 @@ export default function Index() {
 					End-to-End Encrytion (its just the same API).
 				</p>
 			</div>
-			<Button className="w-full">Sign In With Google</Button>
+			<Link to="/get-started">
+				<Button className="w-full">Get started</Button>
+			</Link>
 		</section>
 	);
 }

@@ -16,20 +16,20 @@ export default function Button({
 	const props_copy = { ...props };
 	delete props_copy.className;
 
-	let classApplied: string;
+	let classApplied = 'select-none ';
 
 	switch (variant) {
 		case 'primary':
-			classApplied =
-				'focus:outline-2 focus:outline-offset-2 outline-blue-500 bg-blue-500 text-white font-medium ';
+			classApplied +=
+				'focus:outline focus:outline-2 focus:outline-offset-2 outline-blue-500 bg-blue-500 text-white font-medium ';
 			break;
 		case 'secondary':
-			classApplied = '';
+			classApplied += '';
 			break;
 
 		default:
-			classApplied =
-				'focus:outline-2 focus:outline-offset-2 outline-emerald-500 bg-emerald-500 text-white font-medium ';
+			classApplied +=
+				'focus:outline focus:outline-2 focus:outline-offset-2 outline-emerald-500 bg-emerald-500 text-white font-medium ';
 			break;
 	}
 
